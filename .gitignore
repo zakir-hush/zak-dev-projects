@@ -1,0 +1,6 @@
+# Terraform directories and files
+terraform/azure-storage-account/.terraform/
+terraform/azure-storage-account/terraform.tfstate
+terraform/azure-storage-account/terraform.tfstate.backup
+terraform/azure-storage-account/.terraform.lock.hcl
+
