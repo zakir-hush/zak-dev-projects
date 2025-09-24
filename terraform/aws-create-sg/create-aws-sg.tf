@@ -1,11 +1,11 @@
 provider "aws" {
-  region = "us-east-1"  # Change to your preferred region
+  region = "us-east-1"  // Change to your preferred region
 }
 
 resource "aws_security_group" "new_sg" {
   name        = "terraform-security-group"
   description = "Create Security using Terraform"
-  vpc_id      = "vpc-0a29d4ea8ef4888da"  # Replace with your VPC ID
+  vpc_id      = "vpc-0a29d4ea8ef4888da"  // Replace with your VPC ID
 
   ingress {
     description      = "Allow SSH"
