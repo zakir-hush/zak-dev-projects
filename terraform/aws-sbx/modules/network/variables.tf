@@ -1,10 +1,10 @@
 variable "vpc_id" {
-  description = "The ID of the existing VPC"
+  description = "vpc-03696a9c24405bca5"
   type        = string
 }
 
 variable "az" {
-  description = "Availability Zone for the subnets"
+  description = "ap-southeast-2c"
   type        = string
 }
 

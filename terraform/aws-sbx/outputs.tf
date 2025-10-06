@@ -1,3 +1,3 @@
-output "az3_subnet_ids" {
-  value = module.az3_subnets.subnet_ids
+output "az2_subnet_ids" {
+  value = module.az2_subnets.subnet_ids
 }
