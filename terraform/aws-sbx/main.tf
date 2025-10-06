@@ -1,4 +1,5 @@
 provider "aws" {
+  profile = "sandbox"
   region = "ap-southeast-2"
 }
 
