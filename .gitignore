@@ -1,11 +1,9 @@
+# Terraform (global)
+**/.terraform/
+**/.terraform.lock.hcl
+**/*.tfstate
+**/*.tfstate.backup
+**/*.plan
+
+
 # Terraform directories and files
-terraform/azure-storage-account/.terraform/
-terraform/azure-storage-account/.terraform.lock.hcl
-terraform/azure-storage-account/terraform.tfstate
-terraform/azure-storage-account/terraform.tfstate.backup
-
-
-terraform/aws-create-sg/.terraform/
-terraform/aws-create-sg/.terraform.lock.hcl
-terraform/aws-create-sg/terraform.tfstate
-terraform/aws-create-sg/terraform.tfstate.backup
