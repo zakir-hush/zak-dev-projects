@@ -1,16 +1,12 @@
-resource "aws_vpc" "nat_vpc" {
-  cidr_block           = "10.47.0.0/21"
+# resource <resource-type> <resource-name>
+resource "aws_vpc" "datacenter_vpc" {
+  cidr_block           = "10.100.0.0/16"
   enable_dns_support   = true
   enable_dns_hostnames = true
 
   tags = {
-    Name        = "NAT-VPC"
-    Environment = "SBX"
+    Name        = "Datacenter-vpc"
+    Environment = "LAB"
   }
 }
 
-# Associate secondary CIDR block
-resource "aws_vpc_ipv4_cidr_block_association" "nat_vpc_secondary" {
-  vpc_id     = aws_vpc.nat_vpc.id
-  cidr_block = "100.64.0.0/16"
-}
