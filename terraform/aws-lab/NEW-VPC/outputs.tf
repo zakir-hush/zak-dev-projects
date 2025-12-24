@@ -23,3 +23,11 @@ output "tgw_subnets" {
   }
 }
 
+output "tgw_id" {
+  value = aws_ec2_transit_gateway.datacenter_tgw.id
+}
+
+output "tgw_attachment_id" {
+  value = aws_ec2_transit_gateway_vpc_attachment.datacenter_tgw_attachment.id
+}
+
