@@ -23,11 +23,28 @@ output "tgw_subnets" {
   }
 }
 
-output "tgw_id" {
-  value = aws_ec2_transit_gateway.datacenter_tgw.id
+#output "tgw_id" {
+#  value = aws_ec2_transit_gateway.datacenter_tgw.id
+#}
+
+#output "tgw_attachment_id" {
+#  value = aws_ec2_transit_gateway_vpc_attachment.datacenter_tgw_attachment.id
+#}
+
+output "igw_id" {
+  value = {
+    aws_internet_gateway.datacenter_vpc_igw.id
+  }
 }
 
-output "tgw_attachment_id" {
-  value = aws_ec2_transit_gateway_vpc_attachment.datacenter_tgw_attachment.id
+output "route_table" {
+  value = {
+    aws_route_table.datacenter_vpc_rt.id
+  }
 }
 
+output "ec2" {
+  value = {
+    aws_instance.flask.id
+  }
+}
