@@ -1,6 +1,6 @@
 resource "aws_security_group" "web" {
   name        = "flask-sg"
-  description = "Allow SSH and HTTP"
+  description = "Allow SSH and flask port 5000"
   vpc_id      = aws_vpc.datacenter_vpc.id
 
   ingress {
@@ -11,8 +11,8 @@ resource "aws_security_group" "web" {
   }
 
   ingress {
-    from_port   = 80
-    to_port     = 80
+    from_port   = 5000
+    to_port     = 5000
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
@@ -53,7 +53,7 @@ resource "aws_instance" "flask" {
     def hello():
         return "Hello Zakki from Flask on EC2!"
 
-    app.run(host="0.0.0.0", port=80)
+    app.run(host="0.0.0.0", port=5000)
     APP
 
     python3 /home/ec2-user/app.py &
